@@ -1,0 +1,7 @@
+hosts: ubuntu_prometheus
+  tasks:
+    - name: Check Apache service status and enable it if not running
+      systemd:
+        name: apache2
+        state: started
+        enabled: yes
